@@ -1,0 +1,6 @@
+<h1>Create a new ship listing</h1>
+<%= simple_form_for @ship do |ship| %>
+  <%= ship.input :name, placeholder: 'Ship Name' %>
+  <%= ship.input :size, placeholder: 'Person capacity' %>
+  <%= ship.input :price, placeholder: 'Ship price' %>
+<% end %>
