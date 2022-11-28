@@ -1,5 +1,4 @@
 class ShipsController < ApplicationController
-  # skip_before_action :authenticate_user!, only: :index
 
   def index
     @ships = Ship.all
@@ -12,7 +11,7 @@ class ShipsController < ApplicationController
   def create
     @ship = Ship.new(ship_params)
     if @ship.save
-      redirec_to ship_path(@ship)
+      redirect_to ships_path
     else
       render :new
     end
