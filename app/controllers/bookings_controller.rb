@@ -19,11 +19,8 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.ship = @ship
     if @booking.save!
-      NotifierMailer.with(booking: @booking).booking_email.deliver_later
-      flash[:success] = "Thank you for your order! We'll get contact you soon!"
       redirect_to root_path
     else
-      flash.now[:error] = "Your order form had some errors. Please check the form and resubmit."
       render :new
     end
   end
