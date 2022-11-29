@@ -1,16 +1,15 @@
 
-<% @ships.each do |ship| %>
-  <div class="card-ship-index">
-  <img src="<%= cl_image_path(ship.picture.key) %>" class="card-img-top" alt="...">
-  <div class="card-ship-info">
-    <h5 class="card-title"> <%= ship.name %></h5>
-    <p class="card-text">
-    <%= ship.size %>
-    <%= ship.price %><%= ship.rating %></p>
-    <a href="#" class="btn btn-primary">Book Now</a>
-  </div>
-</div>
-
-<% end %>
-
-<%= link_to "add new ship", new_ship_path%>
+<div class="card" style="width: 18rem;">
+        <% if ship.picture.attached? %>
+       <%= cl_image_path(ship.picture.key) %>
+       <% else %>
+        <img src="https://media.istockphoto.com/id/1363988379/vector/rocket-wallpaper.jpg?s=612x612&w=0&k=20&c=Pih_wsE635bIFgBMaOrRcuDIpAcB00rpW8yXNAGtdIk=" class="card-img-top" alt="...">
+        <% end %>
+        <div>
+          <h5><%= ship.name %></h5>
+          <p>
+          <%= ship.size %>
+          <%= ship.price %><%= ship.rating %></p>
+          <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
