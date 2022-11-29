@@ -1,5 +1,4 @@
 class ShipsController < ApplicationController
-
   def index
     @ships = Ship.all
   end
@@ -11,9 +10,8 @@ class ShipsController < ApplicationController
   def create
     @ship = Ship.new(ship_params)
     @ship.user = current_user
-    # current_user - This replaced User.last. Waiting for login Gem to be finished.
     if @ship.save!
-      redirect_to ships_path
+      redirect_to root_path
     else
       render :new
     end
