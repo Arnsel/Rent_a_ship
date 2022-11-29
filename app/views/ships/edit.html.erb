@@ -1,5 +1,15 @@
 <h1>Edit an existing ship listing</h1>
-<%= simple_form_for @ship, url: edit_ship_path do |ship| %>
+<%# <%= form_with model: @ship, url: edit_ship_path do |w| %>
+  <%# <%= w.label :name %>
+  <%# <%= w.text_field :name %>
+  <%# <%= w.label :size %>
+  <%# <%= w.text_field :size %>
+  <%# <%= w.label :price %>
+  <%# <%= w.text_field :price %>
+  <%# <%= w.submit %>
+<%# <% end %>
+
+<%= simple_form_for @ship do |ship| %>
   <%= ship.input :name%>
   <%= ship.input :size %>
   <%= ship.input :price %>

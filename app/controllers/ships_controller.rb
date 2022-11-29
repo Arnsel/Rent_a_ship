@@ -27,6 +27,10 @@ class ShipsController < ApplicationController
     redirect_to ship_path(@ship)
   end
 
+  def edit
+    @ship = Ship.find(params[:id])
+  end
+
   private
 
   def ship_params
