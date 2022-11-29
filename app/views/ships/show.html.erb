@@ -1,0 +1,7 @@
+<h1>Selected Ship</h1>
+
+<h2><%= @ship.name %></h2>
+<h1><%= @ship.size %></h1>
+<h2><%= @ship.price %></h2>
+<%= link_to "Article List", ship_path %>
+<%= link_to "Edit", edit_ship_path(@ship)%><br>
