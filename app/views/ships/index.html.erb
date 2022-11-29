@@ -20,11 +20,13 @@
   <div class="card" style="width: 18rem;">
   <img src="<%= cl_image_path(ship.picture.key) %>" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title"> <%= ship.name %></h5>
+    <h5 class="card-title"> <%= link_to ship.name, ship_path(ship) %></h5>
     <p class="card-text">
     <%= ship.size %>
     <%= ship.price %><%= ship.rating %></p>
-    <a href="#" class="btn btn-primary">Book Now</a>
+    <%= link_to "book now", new_ship_booking_path(ship)%>
   </div>
 </div>
 <% end %>
+
+<div><%= link_to "Add a ship", new_ship_path, class: "btn btn-primary"%></div>
