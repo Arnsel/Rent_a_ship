@@ -3,6 +3,6 @@
 <h2><%= @ship.name %></h2>
 <h1><%= @ship.size %></h1>
 <h2><%= @ship.price %></h2>
-<%= link_to "Article List", ship_path %>
+<%= link_to "Article List", root_path %>
 <%= link_to "Edit", edit_ship_path(@ship)%><br>
 <%= link_to "Delete", ship_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

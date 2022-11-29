@@ -19,6 +19,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.ship = @ship
     if @booking.save!
+      # UserMailer.booking_email(@booking).deliver
       redirect_to root_path
     else
       render :new
