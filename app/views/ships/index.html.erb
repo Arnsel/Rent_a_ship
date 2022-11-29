@@ -1,9 +1,16 @@
 <h1>Ship Listings</h1>
 <% @ships.each do |ship| %>
-  <%= ship.name %>
-  <%= ship.size %>
-  <%= ship.price %>
-  <%= ship.rating %>
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> <%= ship.name %></h5>
+    <p class="card-text">
+    <%= ship.size %>
+    <%= ship.price %><%= ship.rating %></p>
+    <a href="#" class="btn btn-primary">Book Now</a>
+  </div>
+</div>
+
 <% end %>
 
 <%= link_to "add new ship", new_ship_path%>
