@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     @review.booking = @booking
     # @review.booking.ship = @ship
     if @review.save
-      redirect_to ships_path
+      redirect_to ship_path(@ship)
     else
       render :new, status: :unprocessable_entity
     end
