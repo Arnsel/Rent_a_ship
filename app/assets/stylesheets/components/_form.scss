@@ -1,0 +1,13 @@
+.form_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-style: solid, black, 5px;
+  width: 500px;
+  height: 500px;
+  background-color: darkgrey;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 10px 5px 5px lightgrey;
+  color: white;
+}
