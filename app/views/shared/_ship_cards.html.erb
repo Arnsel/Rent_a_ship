@@ -1,0 +1,16 @@
+
+<% @ships.each do |ship| %>
+  <div class="card-ship-index">
+  <img src="<%= cl_image_path(ship.picture.key) %>" class="card-img-top" alt="...">
+  <div class="card-ship-info">
+    <h5 class="card-title"> <%= ship.name %></h5>
+    <p class="card-text">
+    <%= ship.size %>
+    <%= ship.price %><%= ship.rating %></p>
+    <a href="#" class="btn btn-primary">Book Now</a>
+  </div>
+</div>
+
+<% end %>
+
+<%= link_to "add new ship", new_ship_path%>
