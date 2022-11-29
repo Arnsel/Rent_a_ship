@@ -1,6 +1,8 @@
 class NotifierMailer < ApplicationMailer
-  def booking_email(booking)
-    @user = booking.users
-    mail(to: @user.email, subject: 'Booking Confirmation')
+
+  def booking_email
+    @booking = params[:booking]
+
+    mail(to: 'Jbarkerlouth@gmail.com', subject: "You got a new order!")
   end
 end
