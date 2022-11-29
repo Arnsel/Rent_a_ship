@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "ships#index"
 
-  resources :ships, except: :index
+  resources :ships
 end

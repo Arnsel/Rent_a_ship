@@ -10,7 +10,7 @@ class ShipsController < ApplicationController
 
   def create
     @ship = Ship.new(ship_params)
-    @ship.user = User.last
+    @ship.user = current_user
     # current_user - This replaced User.last. Waiting for login Gem to be finished.
     if @ship.save!
       redirect_to ships_path
