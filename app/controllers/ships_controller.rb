@@ -1,12 +1,12 @@
 class ShipsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index]
+  before_action :set_ship, only: %i[show update edit destroy]
 
   def index
     @ships = Ship.all
   end
 
   def show
-    @ship = Ship.find(params[:id])
   end
 
   def new
@@ -24,16 +24,23 @@ class ShipsController < ApplicationController
   end
 
   def update
-    @ship = Ship.find(params[:id])
     @ship.update(ship_params)
     redirect_to ship_path(@ship)
   end
 
   def edit
-    @ship = Ship.find(params[:id])
+  end
+
+  def destroy
+    @ship.destroy
+    redirect_to root_path, status: :see_other
   end
 
   private
+
+  def set_ship
+    @ship = Ship.find(params[:id])
+  end
 
   def ship_params
     params.require(:ship).permit(:name, :size, :price, :picture)
