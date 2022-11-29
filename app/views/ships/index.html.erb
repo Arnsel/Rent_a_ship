@@ -1,4 +1,21 @@
-<h1>Ship Listings</h1>
+<header>
+  <div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('https://cdn.mos.cms.futurecdn.net/4MLyNZ66GSMUp7z49Q8k3K-1920-80.jpg.webp');
+      height: 500px;">
+    <div class="d-flex justify-content-center h-100 align-items-center">
+      <div class="text-white">
+        <h1 class="mb-3">Welcome to Rent-A-Ship</h1>
+        <h4 class="mb-3">Get the perfect spaceship for your Intergalactic trip!</h4>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<h1 class="d-flex justify-content-center align-items-center">Ship Listings</h1>
+
 <% @ships.each do |ship| %>
   <div class="card" style="width: 18rem;">
   <img src="<%= cl_image_path(ship.picture.key) %>" class="card-img-top" alt="...">
