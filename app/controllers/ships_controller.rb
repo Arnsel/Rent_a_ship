@@ -3,6 +3,10 @@ class ShipsController < ApplicationController
     @ships = Ship.all
   end
 
+  def show
+    @ship = Ship.find(params[:id])
+  end
+
   def new
     @ship = Ship.new
   end
@@ -15,6 +19,12 @@ class ShipsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def update
+    @ship = Ship.find(params[:id])
+    @ship.update(ship_params)
+    redirect_to ship_path(@ship)
   end
 
   private

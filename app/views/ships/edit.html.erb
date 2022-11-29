@@ -1,0 +1,8 @@
+<h1>Edit an existing ship listing</h1>
+<%= simple_form_for @ship, url: edit_ship_path do |ship| %>
+  <%= ship.input :name%>
+  <%= ship.input :size %>
+  <%= ship.input :price %>
+  <%= ship.input :picture, as: :file %>
+  <%= ship.submit %>
+<% end %>
