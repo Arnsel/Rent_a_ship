@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :ship, only: [:show, :new, :create]
+  before_action :ship, only: %i[show new create]
 
   def index
     @user = current_user
