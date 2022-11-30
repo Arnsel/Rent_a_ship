@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.ship = @ship
     if @booking.save!
-      redirect_to bookings_path
+      redirect_to ship_booking_path(@booking)
     else
       render :new
     end
@@ -32,6 +32,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :user_id, :ship_id)
+    params.require(:booking).permit(:start_date, :end_date, :user_id, :ship_id, :id)
   end
 end
