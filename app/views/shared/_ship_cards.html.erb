@@ -1,9 +1,9 @@
 
 <div class="card" style="width: 18rem;">
         <% if ship.picture.attached? %>
-       <%= cl_image_path(ship.picture.key) %>
+        <a href="<%= ship_path(ship)%>"><img src="<%= cl_image_path(ship.picture.key) %>">
        <% else %>
-        <img src="https://media.istockphoto.com/id/1363988379/vector/rocket-wallpaper.jpg?s=612x612&w=0&k=20&c=Pih_wsE635bIFgBMaOrRcuDIpAcB00rpW8yXNAGtdIk=" class="card-img-top" alt="...">
+        <a href="<%= ship_path(ship)%>"><img src="https://media.istockphoto.com/id/1363988379/vector/rocket-wallpaper.jpg?s=612x612&w=0&k=20&c=Pih_wsE635bIFgBMaOrRcuDIpAcB00rpW8yXNAGtdIk=" class="card-img-top" alt="...">
         <% end %>
         <div>
           <h5><%= ship.name %></h5>
