@@ -7,11 +7,11 @@
        <% else %>
         <a href="<%= ship_path(ship)%>"><img src="https://media.istockphoto.com/id/1363988379/vector/rocket-wallpaper.jpg?s=612x612&w=0&k=20&c=Pih_wsE635bIFgBMaOrRcuDIpAcB00rpW8yXNAGtdIk=" class="card-img-top" alt="...">
         <% end %>
-        <div>
+        <div class="text-center my-3">
           <h5><%= ship.name %></h5>
-          <p>
-          <i class="fa-solid fa-person"></i> <%= ship.size %>
-          <i class="fa-solid fa-euro-sign"></i> <%= ship.price %><%= ship.rating %></p>
+          <p class="d-flex justify-content-between" style="padding:0 100px;">
+         <span > <i class="fa-solid fa-person"></i> <%= ship.size %></span>
+         <span > <i class="fa-solid fa-euro-sign"></i> <%= ship.price %><%= ship.rating %></span></p>
           <%= link_to "Book Now", new_ship_booking_path(ship), class: "btn btn-primary"%>
         </div>
       </div>
