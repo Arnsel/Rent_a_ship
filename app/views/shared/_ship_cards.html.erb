@@ -10,8 +10,8 @@
         <div>
           <h5><%= ship.name %></h5>
           <p>
-          <%= ship.size %>
-          <%= ship.price %><%= ship.rating %></p>
+          <i class="fa-solid fa-person"></i> <%= ship.size %>
+          <i class="fa-solid fa-euro-sign"></i> <%= ship.price %><%= ship.rating %></p>
           <%= link_to "Book Now", new_ship_booking_path(ship), class: "btn btn-primary"%>
         </div>
       </div>
