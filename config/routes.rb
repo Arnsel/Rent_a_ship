@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   root to: "ships#index"
 
   resources :ships do
-    resources :bookings do
+    resources :bookings, except: %i[index] do
       resources :reviews, only: %i[new create]
     end
   end
+  resources :bookings, only: %i[index]
 end

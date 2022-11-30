@@ -1,5 +1,5 @@
 class ShipsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index]
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_ship, only: %i[show update edit destroy]
 
   def index

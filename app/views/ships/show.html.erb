@@ -1,10 +1,26 @@
-<h1>Selected Ship</h1>
+<div class="d-flex justify-content-center">
+  <h1 class="h1"><%= @ship.name %></h1>
+</div>
 
-<h2><%= @ship.name %></h2>
-<h1><%= @ship.size %></h1>
-<h2><%= @ship.price %></h2>
-<%= link_to "Book", new_ship_booking_path(@ship)%>
-<%= link_to "View your bookings", ship_bookings_path(@ship)%>
-<%= link_to "Edit", edit_ship_path(@ship)%>
-<%= link_to "Back", root_path %>
-<%= link_to "Delete", ship_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+
+
+<div class="container">
+  <div class="image_frame"><a href="<%= ship_path(@ship)%>"><img src="<%= cl_image_path(@ship.picture.key) %>"></div>
+    <div class="form_box justify-content-center">
+      <h3 class="text_box">Ship Size:  <%= @ship.size %></h3>
+      <h3 class="text_box">Price:  <%= @ship.price %></h3>
+      <div class="btn_group">
+        <button type="button" class="btn btn-secondary"><%= link_to "Book", new_ship_booking_path(@ship)%></button>
+        <button type="button" class="btn btn-secondary"><%= link_to "Back", root_path %></button>
+      </div>
+      <% if user_signed_in? %>
+        <div class="btn_group">
+          <button type="button" class="btn btn-secondary"><%= link_to "Edit", edit_ship_path(@ship)%></button>
+          <button type="button" class="btn btn-secondary"><%= link_to "Delete", ship_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></button>
+        </div>
+      <% else %>
+      <% end %>
+    </div>
+  </div>
+</div>

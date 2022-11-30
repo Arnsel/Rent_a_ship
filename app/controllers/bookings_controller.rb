@@ -1,9 +1,10 @@
 class BookingsController < ApplicationController
-  before_action :ship, only: %i[show new create]
+  before_action :set_ship, only: %i[show new create]
 
   def index
     @user = current_user
     @bookings = Booking.where(user: @user)
+    @date = DateTime.now
   end
 
   def show
@@ -19,15 +20,15 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.ship = @ship
     if @booking.save!
-      redirect_to bookings_path
+      redirect_to ship_booking_path(id: @booking, ship_id: @ship)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
   private
 
-  def ship
+  def set_ship
     @ship = Ship.find(params[:ship_id])
   end
 

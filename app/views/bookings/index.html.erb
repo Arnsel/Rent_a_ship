@@ -1,0 +1,18 @@
+<h1>All Your Bookings!</h1>
+<% @bookings.each do |book| %>
+  <% if @date <= book.end_date %>
+    <h3>Current Live Bookings!</h3>
+    <%= book.ship.name%> <br>
+    <%= book.start_date%> <br>
+    <%= book.end_date%> <br>
+  <% end %>
+<% end %>
+
+<% @bookings.each do |book| %>
+  <% if @date > book.end_date%>
+    <h3>Closed Bookings</h3>
+    <%= book.ship.name%> <br>
+    <%= book.start_date%> <br>
+    <%= book.end_date%> <br>
+  <% end %>
+<% end %>

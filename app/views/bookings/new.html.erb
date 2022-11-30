@@ -1,9 +1,13 @@
-<h1>Create a booking for <%= @ship.name %></h1>
+<div class="d-flex justify-content-center">
+  <h1 class="h1">Create a booking for <%= @ship.name %></h1>
+</div>
 
-<div class="form_box justify-content-center">
-  <%= simple_form_for [@ship, @booking] do |book| %>
-    <%= book.input :start_date%>
-    <%= book.input :end_date %>
-    <%= book.submit %>
-  <% end %>
+<div class="d-flex justify-content-center">
+  <div class="form_box justify-content-center">
+    <%= simple_form_for [@ship, @booking] do |book| %>
+      <%= book.input :start_date%>
+      <%= book.input :end_date %>
+      <%= book.submit %>
+    <% end %>
+  </div>
 </div>
