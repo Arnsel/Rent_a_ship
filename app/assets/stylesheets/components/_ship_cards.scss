@@ -5,9 +5,15 @@ card-ship-index
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-ship-index > img {
-  height: 50px;
-  width: 50PX;
+.image-container {
+  max-width:500px;
+  max-height:500px;
+  object-fit: cover;
+}
+
+.image-container img {
+  max-width:100%;
+  max-height:500px;
   object-fit: cover;
 }
 
