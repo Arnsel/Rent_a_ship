@@ -10,6 +10,6 @@
           <p>
           <%= ship.size %>
           <%= ship.price %><%= ship.rating %></p>
-          <a href="#" class="btn btn-primary">Book Now</a>
+          <%= link_to "Book Now", new_ship_booking_path(ship), class: "btn btn-primary"%>
         </div>
       </div>
