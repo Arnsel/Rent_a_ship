@@ -3,7 +3,7 @@
     class="p-5 text-center bg-image"
     style="
       background-image: url('https://cdn.mos.cms.futurecdn.net/4MLyNZ66GSMUp7z49Q8k3K-1920-80.jpg.webp');
-      height: 500px;">
+      height: 800px;">
     <div class="d-flex justify-content-center h-100 align-items-center">
       <div class="text-white">
         <h1 class="header mb-3">Welcome to Rent-A-Ship</h1>
@@ -30,10 +30,11 @@
   </div>
 </div>
 
-<div class="container">
+<div class="main">
   <div class="cards">
-    <% @ships.sample(12).each do |ship| %>
-    <%= render :partial => 'shared/ship_cards', :locals => {:ship => ship } %>
-    <% end %>
+      <% @ships.sample(12).each do |ship| %>
+      <%= render :partial => 'shared/ship_cards', :locals => {:ship => ship } %>
+      <% end %>
   </div>
 </div>
+
