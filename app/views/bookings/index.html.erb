@@ -27,6 +27,9 @@
         <h5><%= book.ship.name %></h5>
         <p><%= book.start_date%></p>
         <p><%= book.end_date%></p>
+        <div class="review">
+          <%= link_to "Add a review", new_ship_booking_review_path(booking_id: book, ship_id: book.ship)%>
+        </div>
       </div>
     <% end %>
   <% end %>
