@@ -6,7 +6,14 @@ class ShipsController < ApplicationController
     @ships = Ship.all
   end
 
+  # def my_ships
+  #   @ships = Ship.all
+  #   # @user = current_user
+  #   # @ships = Ship.where(user: @user)
+  # end
+
   def show
+    @booking = Booking.new
   end
 
   def new
