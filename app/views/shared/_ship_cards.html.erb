@@ -1,17 +1,17 @@
-
-<div class="card" style="width: 18rem;">
-        <% if ship.picture.attached? %>
-        <div class ="image-container">
-        <a href="<%= ship_path(ship)%>"><img src="<%= cl_image_path(ship.picture.key) %>">
+<div class="cards_item">
+  <div class="card w-100">
+    <div class="card_image" style = "height: 200px; width: 100%;"><a href="<%= ship_path(ship)%>"><img src="<%= cl_image_path(ship.picture.key) %>"></div>
+        <div class="card_content">
+            <div class="card_title_div">
+              <h2 class="card_title"><a href="<%= ship_path(ship)%>"><%= ship.name %></h2>
+            </div>
+            <div class="card_text_div">
+              <p class="card_text"><i class="fa-solid fa-person"></i> <%= ship.size %></p>
+              <p class="card_text"><i class="fa-solid fa-euro-sign"></i> <%= ship.price %></p>
+            </div>
+            <div class="div_button">
+              <button class="btn card_btn"><%= link_to "Book Now", new_ship_booking_path(ship)%></button>
+            </div>
         </div>
-       <% else %>
-        <a href="<%= ship_path(ship)%>"><img src="https://media.istockphoto.com/id/1363988379/vector/rocket-wallpaper.jpg?s=612x612&w=0&k=20&c=Pih_wsE635bIFgBMaOrRcuDIpAcB00rpW8yXNAGtdIk=" class="card-img-top" alt="...">
-        <% end %>
-        <div class="text-center my-3">
-          <h5><%= ship.name %></h5>
-          <p class="d-flex justify-content-between" style="padding:0 100px;">
-         <span > <i class="fa-solid fa-person"></i> <%= ship.size %></span>
-         <span > <i class="fa-solid fa-euro-sign"></i> <%= ship.price %><%= ship.rating %></span></p>
-          <%= link_to "Book Now", new_ship_booking_path(ship), class: "btn btn-primary"%>
-        </div>
-      </div>
+  </div>
+</div>

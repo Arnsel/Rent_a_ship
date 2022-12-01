@@ -1,55 +1,101 @@
-card-ship-index
-.card-ship-index {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+.main {
+  display: flex;
+  justify-content: center;
 }
 
-.image-container {
-  width:100px;
-  height:200px;
+img {
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
   object-fit: cover;
+  background-position: center;
 }
 
-.image-container img {
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
 
-  width: 286%;
-  height:200px;
+.btn {
+  color: #f0ebd8;
+  padding: 0.8px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 80%;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  font-family: 'Space Mono', monospace;
+}
 
-  object-fit: cover;
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  text-decoration: none;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-  width: 100%;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  padding: 20px;
 }
 
-.card-ship-index h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-ship-index p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-ship-index .card-ship-index-infos {
-  padding: 16px;
+.cards_item {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  padding: 1rem;
 }
 
-.card-ship-index-infos .card-ship-index-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 2rem;
+  background: linear-gradient(to bottom left, #335c67 20%, #ccc5b9 100%);
+}
+
+.card_title {
+  color: #f0ebd8;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+  font-family: 'Space Mono', monospace;
+}
+
+.card_text {
+  color: #f0ebd8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+  font-family: 'Space Mono', monospace;
+}
+
+.card_text_div {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card_title_div {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.div_button {
+  display: flex;
+  justify-content: center;
 }
