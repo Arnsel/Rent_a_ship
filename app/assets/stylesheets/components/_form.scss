@@ -5,7 +5,7 @@
   border-style: solid, black, 5px;
   width: 500px;
   height: 500px;
-  background-color: darkgrey;
+  background-color: #ccc5b9;
   align-items: center;
   border-radius: 15px;
   box-shadow: 10px 5px 5px lightgrey;
@@ -38,7 +38,7 @@
   padding-right: 50px;
   border-radius: 15px;
   box-shadow: 10px 10px 10px 10px lightgrey;
-  background-color: darkgrey;
+  background-color: #ccc5b9;
 }
 
 .image_frame img {
@@ -63,11 +63,12 @@
   border-radius: 25px;
 }
 
-.btn {
-margin-left: 5px;
-margin-right: 5px;
-margin-top: 20px;
-}
+// .btn {
+// margin-left: 5px;
+// margin-right: 5px;
+// margin-top: 20px;
+// text-shadow: 1px 1px 2px darkgray;
+// }
 
 .btn_group {
   display: flex;
