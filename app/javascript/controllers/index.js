@@ -10,5 +10,8 @@ application.register("hello", HelloController)
 import MouseCursorController from "./mouse_cursor_controller"
 application.register("mouse-cursor", MouseCursorController)
 
+import NavbarController from "./navbar_controller"
+application.register("navbar", NavbarController)
+
 import TypedJsController from "./typed_js_controller"
 application.register("typed-js", TypedJsController)
