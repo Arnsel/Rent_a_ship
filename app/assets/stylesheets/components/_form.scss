@@ -4,8 +4,9 @@
   justify-content: space-between;
   border-style: solid, black, 5px;
   width: 500px;
-  height: 500px;
-  background-color: darkgrey;
+  height: 300px;
+  // background-color: darkgrey;
+  background: linear-gradient(to bottom left, #335c67 20%, #ccc5b9 100%);
   align-items: center;
   border-radius: 15px;
   box-shadow: 10px 5px 5px lightgrey;
@@ -16,34 +17,37 @@
 .image_frame {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   border-style: solid, black, 5px;
   width: 500px;
-  height: 500px;
+  height: 300px;
   align-items: center;
   border-radius: 15px;
   box-shadow: 10px 5px 5px lightgrey;
   color: white;
   overflow: hidden;
   margin-right: 10px;
+  background: linear-gradient(to bottom left, #335c67 20%, #ccc5b9 100%);
 }
 
 .bookings{
-  width: 70vw;
+  width: 600px;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
   margin-top: 50px;
   padding-bottom: 50px;
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 15px;
   box-shadow: 10px 10px 10px 10px lightgrey;
-  background-color: darkgrey;
+  background: linear-gradient(to bottom left, #335c67 20%, #ccc5b9 100%);
+  font-family: 'Space Mono', monospace;
+  text-transform: uppercase;
 }
 
 .image_frame img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 95%;
+  max-height: 95%;
   object-fit: contain;
 }
 
@@ -74,7 +78,21 @@ margin-top: 20px;
 }
 
 .card {
+  text-align: center;
   display: flex;
+  box-shadow: 10px 10px 10px 10px lightgrey;
+  background-color: #ccc5b9;
+  font-family: 'Space Mono', monospace;
+  display: flex;
+}
+
+.review {
+  border-style: solid, black, 5px;
+  box-shadow: 5px 5px 5px 5px lightgrey;
+  margin-bottom: 10px;
+  width: 150px;
+  margin: 5px;
+  background-color: darkgrey;
 }
 
 #circle{
