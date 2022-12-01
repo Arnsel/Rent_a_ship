@@ -4,9 +4,9 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
     updateNavbar() {
       if (window.scrollY >= window.innerHeight) {
-        this.element.classList.add("navbar-on")
+        this.element.classList.add("navbar-off")
       } else {
-        this.element.classList.remove("navbar-on")
+        this.element.classList.remove("navbar-off")
       }
     }
 }

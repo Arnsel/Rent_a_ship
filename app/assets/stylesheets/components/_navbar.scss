@@ -1,12 +1,13 @@
-.navbar {
-  display: none !important;
-}
 
-.navbar-on {
+.navbar {
   display: block !important;
   padding-left: 100px;
   background-color: #ccc5b9 !important;
   font-family: 'Space Mono', monospace !important;
+}
+
+.navbar-off {
+  display: none !important;
 }
 
 .collapse {
