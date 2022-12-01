@@ -15,14 +15,13 @@
 <p></p>
 
 
-<h1 class=" h1 d-flex justify-content-center align-items-center">Ship Listings.</h1>
+<h1 class=" h1 d-flex justify-content-center align-items-center">Ship Listings</h1>
 
 
-
-<div class="container">
+<div class="main">
   <div class="cards">
-    <% @ships.sample(12).each do |ship| %>
-    <%= render :partial => 'shared/ship_cards', :locals => {:ship => ship } %>
-    <% end %>
+      <% @ships.sample(12).each do |ship| %>
+      <%= render :partial => 'shared/ship_cards', :locals => {:ship => ship } %>
+      <% end %>
   </div>
 </div>
