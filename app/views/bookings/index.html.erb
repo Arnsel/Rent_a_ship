@@ -1,18 +1,33 @@
-<h1>All Your Bookings!</h1>
-<% @bookings.each do |book| %>
-  <% if @date <= book.end_date %>
-    <h3>Current Live Bookings!</h3>
-    <%= book.ship.name%> <br>
-    <%= book.start_date%> <br>
-    <%= book.end_date%> <br>
-  <% end %>
-<% end %>
+<h1 class="h1 d-flex justify-content-center align-items-center">All Your Bookings!</h1>
 
-<% @bookings.each do |book| %>
-  <% if @date > book.end_date%>
-    <h3>Closed Bookings</h3>
-    <%= book.ship.name%> <br>
-    <%= book.start_date%> <br>
-    <%= book.end_date%> <br>
+<h3 class="h3 d-flex justify-content-center">Current Live Bookings!</h3>
+
+
+
+
+<div class="d-flex justify-content-center">
+  <% @bookings.each do |book| %>
+    <% if @date <= book.end_date %>
+      <div class="card" style="width: 18rem; margin-left: 20px">
+        <h5><%= book.ship.name%></h5>
+        <p><%= book.start_date%></p>
+        <p><%= book.end_date%></p>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
+
+<h3 class="h3 d-flex justify-content-center">Closed Bookings</h3>
+
+
+<div class="d-flex justify-content-center">
+  <% @bookings.each do |book| %>
+    <% if @date > book.end_date %>
+      <div class="card" style="width: 18rem; margin-left: 20px">
+        <h5><%= book.ship.name %></h5>
+        <p><%= book.start_date%></p>
+        <p><%= book.end_date%></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>

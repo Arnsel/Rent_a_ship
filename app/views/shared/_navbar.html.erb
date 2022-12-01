@@ -14,6 +14,9 @@
             <%= link_to "My Bookings", bookings_path, :style => 'margin-left:10px'%>
           </li>
           <li class="nav-item">
+            <%= link_to "Add a ship", new_ship_path, :style => 'margin-left:10px'%>
+          </li>
+          <li class="nav-item">
             <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, :style => 'margin-left:10px' %>
           </li>
         <% else %>
