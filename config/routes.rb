@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     end
   end
   resources :bookings, only: %i[index]
+  # get 'ships/my_ships', to: 'ships#my_ships', as: 'my_ships'
 end

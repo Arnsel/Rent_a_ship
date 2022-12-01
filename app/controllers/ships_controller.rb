@@ -3,10 +3,21 @@ class ShipsController < ApplicationController
   before_action :set_ship, only: %i[show update edit destroy]
 
   def index
-    @ships = Ship.all
+    if params[:query].present?
+      @ships = Ship.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @ships = Ship.all
+    end
   end
 
+  # def my_ships
+  #   @ships = Ship.all
+  #   # @user = current_user
+  #   # @ships = Ship.where(user: @user)
+  # end
+
   def show
+    @booking = Booking.new
   end
 
   def new
