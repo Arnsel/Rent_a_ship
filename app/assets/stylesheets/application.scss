@@ -15,4 +15,11 @@
 @import "components/search_bar";
 
 @import "components/form";
-@import "components/titles_style"
+@import "components/titles_style";
+
+body{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+
+}
