@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.ship = @ship
     if @booking.save!
-      redirect_to ship_booking_path(id: @booking, ship_id: @ship)
+      redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
     end
