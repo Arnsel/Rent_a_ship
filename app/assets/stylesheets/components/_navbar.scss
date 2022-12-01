@@ -1,13 +1,15 @@
 
 .navbar {
-  display: block !important;
   padding-left: 100px;
-  background-color: #ccc5b9 !important;
+  background-color: transparent !important;
+  transition: 0.5s background-color ease;
   font-family: 'Space Mono', monospace !important;
 }
 
-.navbar-off {
-  display: none !important;
+.navbar-show {
+  padding-left: 100px;
+  background-color: #ccc5b9 !important;
+  font-family: 'Space Mono', monospace !important;
 }
 
 .collapse {
