@@ -24,11 +24,11 @@
   <div class="d-flex justify-content-center">
     <div class="search_card col-lg-6" >
       <%= form_with url: ships_path, method: :get, class: "d-flex" do %>
-        <div class="input-group rounded">
+        <div class="h1 input-group rounded">
           <%= text_field_tag :query,
             params[:query],
             class: "form-control rounded",
-            placeholder: "Find a ship"
+            placeholder: "Find a ship..."
           %>
           <%= submit_tag "📡", class: "btn-search" %>
         </div>
