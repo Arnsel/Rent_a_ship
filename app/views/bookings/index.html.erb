@@ -10,7 +10,7 @@
     <% if @date <= book.end_date %>
        <div class="cards_item">
         <div class="card w-100">
-          <div class="card_image" style = "height: 200px; width: 18rem;"><img src="<%= cl_image_path(book.ship.picture.key) %>"></div>
+          <div class="card_image" style = "height: 200px;"><img src="<%= cl_image_path(book.ship.picture.key) %>"></div>
               <div class="card_content">
                   <div class="card_title_div">
                     <h2 class="card_title"><%= book.ship.name %></h2>
@@ -36,7 +36,7 @@
     <% if @date > book.end_date %>
       <div class="cards_item">
         <div class="card w-100">
-          <div class="card_image" style = "height: 200px; width: 18rem;"><img src="<%= cl_image_path(book.ship.picture.key) %>"></div>
+          <div class="card_image" style = "height: 200px;"><img src="<%= cl_image_path(book.ship.picture.key) %>"></div>
               <div class="card_content">
                   <div class="card_title_div">
                     <h2 class="card_title"><%= book.ship.name %></h2>
