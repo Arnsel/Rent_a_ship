@@ -18,6 +18,11 @@ class ShipsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @bookings = @ship.bookings
+      # @reviews = booking.reviews
+      # .each do |review|
+        # @review = review
+      # end
   end
 
   def new
