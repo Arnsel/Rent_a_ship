@@ -60,9 +60,7 @@
 }
 
 .image_frame img {
-  max-width: 95%;
-  max-height: 95%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .container {
