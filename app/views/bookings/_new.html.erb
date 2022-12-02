@@ -1,8 +1,8 @@
-<div class="d-flex justify-content-center">
-</div>
-  <h1 class="h1">Create a booking</h1>
-    <%= simple_form_for [@ship, @booking] do |book| %>
-      <%= book.input :start_date%>
-      <%= book.input :end_date %>
-      <%= book.submit %>
-    <% end %>
+<h1 class="card_title_create">Create A Booking</h1>
+  <%= simple_form_for [@ship, @booking] do |book| %>
+    <%= book.input :start_date%>
+    <%= book.input :end_date %>
+    <div>
+      <button type="button" class="btn-create-booking"><%= book.submit %></button>
+    </div>
+  <% end %>

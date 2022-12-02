@@ -2,8 +2,8 @@
   <h1 class="h1">Create a new ship listing</h1>
 </div>
 
-<div class="d-flex justify-content-center">
-  <div class="form_box justify-content-center">
+
+  <div class="form_box_new_ship justify-content-center">
     <%= simple_form_for @ship do |ship| %>
         <%= ship.input :name%>
         <%= ship.input :size %>
@@ -12,4 +12,3 @@
         <%= ship.submit %>
     <% end %>
   </div>
-</div>
