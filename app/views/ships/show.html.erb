@@ -4,7 +4,9 @@
 
 <div class="center">
   <div class="container d-flex justify-content-center">
-    <div class="image_frame"><img src="<%= cl_image_path(@ship.picture.key) %>"></div>
+    <div class="image_frame">
+    <img src="<%= cl_image_path(@ship.picture.key) %>">
+    </div>
       <div class="form_box justify-content-center">
         <h3 class="text_box"><i class="fa-solid fa-person"></i> <%= @ship.size %></h3>
         <h3 class="text_box"><i class="fa-solid fa-euro-sign"></i> <%= @ship.price %></h3>
