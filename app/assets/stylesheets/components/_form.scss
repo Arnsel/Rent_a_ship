@@ -5,7 +5,21 @@
   border-style: solid, black, 5px;
   width: 500px;
   height: 300px;
-  // background-color: darkgrey;
+  background: linear-gradient(to bottom left, #335c67 20%, #ccc5b9 100%);
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 10px 5px 5px lightgrey;
+  color: white;
+  overflow: hidden;
+}
+
+.form_box_new_ship {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-style: solid, black, 5px;
+  width: 500px;
+  height: 500px;
   background: linear-gradient(to bottom left, #335c67 20%, #ccc5b9 100%);
   align-items: center;
   border-radius: 15px;
@@ -67,15 +81,26 @@
   border-radius: 25px;
 }
 
-// .btn {
-// margin-left: 5px;
-// margin-right: 5px;
-// margin-top: 20px;
-// text-shadow: 1px 1px 2px darkgray;
-// }
-
 .btn_group {
   display: flex;
+  margin-top: 30px;
+}
+
+.btn_new {
+  color: #f0ebd8;
+  padding: 0.8px;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100px;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  font-family: 'Space Mono', monospace;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .card {
