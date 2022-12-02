@@ -47,7 +47,13 @@ a, a:hover, a:focus, a:active {
 .cards_item {
   display: flex;
   padding: 1rem;
+  object-fit: contain;
 }
+
+.card_image{
+  object-fit: cover;
+}
+
 
 .card {
   background-color: white;
